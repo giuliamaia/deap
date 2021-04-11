@@ -427,7 +427,7 @@ def eaMuCommaLambda(population, toolbox, mu, lambda_, cxpb, mutpb, ngen,
             halloffame.update(offspring)
 
         # Select the next generation population
-        population[:] = toolbox.select(offspring, mu)
+        population[:] = toolbox.select(offspring)
 
         # Update the statistics with the new population
         record = stats.compile(population) if stats is not None else {}
